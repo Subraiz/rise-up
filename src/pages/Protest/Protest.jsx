@@ -40,7 +40,6 @@ class Protest extends Component {
       .get()
       .then((doc) => {
         const protest = doc.data();
-        console.log(protest);
 
         if (protest) {
           const { lng, lat } = protest.starting_point;

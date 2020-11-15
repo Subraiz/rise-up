@@ -72,6 +72,7 @@ class Modal extends Component {
             <a
               href="https://civilrights.findlaw.com/enforcing-your-civil-rights/protest-laws-by-state.html"
               target="_blank"
+              rel="noreferrer"
             >
               state's protest laws
             </a>

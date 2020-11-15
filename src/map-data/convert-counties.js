@@ -267,6 +267,4 @@ for (let i = 0; i < counties.features.length; i++) {
 }
 
 var json = JSON.stringify(counties);
-fs.writeFile("counties-test.json", json, "utf8", () => {
-  console.log("done");
-});
+fs.writeFile("counties-test.json", json, "utf8", () => {});

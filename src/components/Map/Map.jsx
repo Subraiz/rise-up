@@ -24,8 +24,6 @@ class Map extends Component {
     };
   }
 
-  async componentWillMount() {}
-
   zoom = (d, el, path) => {
     const zoomSettings = {
       duration: 1000,
@@ -79,7 +77,6 @@ class Map extends Component {
       .get()
       .then((querySnapshot) => {
         const data = querySnapshot.docs.map((doc) => doc.data());
-        console.log(data);
         this.setState({ ProtestData: data });
       });
 

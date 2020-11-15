@@ -200,7 +200,6 @@ class CreateProtest extends Component {
   handleSelect = (address) => {
     this.setState({ address });
     geocodeByAddress(address).then(async (results) => {
-      console.log(results);
       const coords = await getLatLng(results[0]);
       let formattedAddress = results[0].formatted_address;
       let county;
@@ -214,6 +213,8 @@ class CreateProtest extends Component {
           county.pop();
           county = county.join(" ").trim();
           return true;
+        } else {
+          return false;
         }
       });
 
@@ -223,6 +224,8 @@ class CreateProtest extends Component {
           state = stateAbbrev;
           stateName = address.long_name;
           return true;
+        } else {
+          return false;
         }
       });
 

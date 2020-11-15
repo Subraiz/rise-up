@@ -57,25 +57,25 @@ class Home extends Component {
           </div>
           <div className="legend">
             <p className="legend-title">Protest Activity</p>
-            <div class="legend-data">
-              <div class="data">
-                <div class="color-box first-box"></div>
+            <div className="legend-data">
+              <div className="data">
+                <div className="color-box first-box"></div>
                 <p className="color-number">0</p>
               </div>
-              <div class="data">
-                <div class="color-box second-box"></div>
+              <div className="data">
+                <div className="color-box second-box"></div>
                 <p className="color-number">1-50</p>
               </div>
-              <div class="data">
-                <div class="color-box third-box"></div>
+              <div className="data">
+                <div className="color-box third-box"></div>
                 <p className="color-number">51-100</p>
               </div>
-              <div class="data">
-                <div class="color-box fourth-box"></div>
+              <div className="data">
+                <div className="color-box fourth-box"></div>
                 <p className="color-number">101-150</p>
               </div>
-              <div class="data">
-                <div class="color-box fifth-box"></div>
+              <div className="data">
+                <div className="color-box fifth-box"></div>
                 <p className="color-number">150+</p>
               </div>
             </div>
