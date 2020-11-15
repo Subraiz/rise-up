@@ -88,11 +88,6 @@ class Map extends Component {
 
     const { ProtestData } = this.state;
 
-    TweenMax.from(".map-container", 1, {
-      ease: "expo.inOut",
-      opacity: 0,
-    });
-
     countyMap.selectAll("g").remove();
 
     countyMap
@@ -212,6 +207,18 @@ class Map extends Component {
       })
       .attr("cursor", "pointer")
       .attr("class", "county");
+
+    TweenMax.staggerFrom(
+      "path",
+      0.5,
+      {
+        ease: "expo.inOut",
+        opacity: 0,
+        y: 20,
+        fill: "black",
+      },
+      0.001
+    );
   }
 
   render() {

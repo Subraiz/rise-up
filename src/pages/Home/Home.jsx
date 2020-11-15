@@ -1,4 +1,5 @@
 import React, { Component, createRef } from "react";
+import { TweenMax } from "gsap";
 import { withRouter } from "react-router";
 import { IoMdLocate } from "react-icons/io";
 import { Map, Protests } from "../../components";
@@ -18,6 +19,10 @@ class Home extends Component {
   setProtest = (protests) => {
     this.setState({ protests });
   };
+
+  componentDidMount() {
+    TweenMax.from(".legend", 2, { y: 40, opacity: 0, ease: "expo.inOut" });
+  }
 
   render() {
     return (
@@ -49,6 +54,31 @@ class Home extends Component {
                 this.mapRef.zoom();
               }}
             />
+          </div>
+          <div className="legend">
+            <p className="legend-title">Protest Activity</p>
+            <div class="legend-data">
+              <div class="data">
+                <div class="color-box first-box"></div>
+                <p className="color-number">0</p>
+              </div>
+              <div class="data">
+                <div class="color-box second-box"></div>
+                <p className="color-number">1-50</p>
+              </div>
+              <div class="data">
+                <div class="color-box third-box"></div>
+                <p className="color-number">51-100</p>
+              </div>
+              <div class="data">
+                <div class="color-box fourth-box"></div>
+                <p className="color-number">101-150</p>
+              </div>
+              <div class="data">
+                <div class="color-box fifth-box"></div>
+                <p className="color-number">150+</p>
+              </div>
+            </div>
           </div>
           <Map ref={(el) => (this.mapRef = el)} setProtest={this.setProtest} />
         </div>
