@@ -23,7 +23,7 @@ class CreateProtest extends Component {
     geocodeByAddress(address)
       .then((results) => {
         console.log(results);
-        getLatLng(results[0]);
+        return getLatLng(results[0]);
       })
       .then((latLng) => console.log("Success", latLng))
       .catch((error) => console.error("Error", error));
