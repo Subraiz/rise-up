@@ -141,22 +141,22 @@ class Protest extends Component {
             <div className="p-social">
               <div className="child-social">
                 <FacebookShareButton
-                  url={`https://riseup.subraiz.com/protest/${protest.id}`}
+                  url={`https://riseup.netlify.app/protest/${protest.id}`}
                 >
                   <SiFacebook className="social-icon" />
                 </FacebookShareButton>
                 <TwitterShareButton
-                  url={`https://riseup.subraiz.com/protest/${protest.id}`}
+                  url={`https://riseup.netlify.app/protest/${protest.id}`}
                 >
                   <AiFillTwitterCircle className="social-icon" />
                 </TwitterShareButton>
                 <LinkedinShareButton
-                  url={`https://riseup.subraiz.com/protest/${protest.id}`}
+                  url={`https://riseup.netlify.app/protest/${protest.id}`}
                 >
                   <SiLinkedin className="social-icon" />
                 </LinkedinShareButton>
                 <RedditShareButton
-                  url={`https://riseup.subraiz.com/protest/${protest.id}`}
+                  url={`https://riseup.netlify.app/protest/${protest.id}`}
                 >
                   <FaReddit className="social-icon" />
                 </RedditShareButton>

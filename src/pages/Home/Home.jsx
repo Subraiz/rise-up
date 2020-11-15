@@ -39,10 +39,70 @@ class Home extends Component {
             Create a Protest
           </p>
           <p className="nav-header">Donate To Your Cause</p>
-          <p className="cause">Police Brutality</p>
-          <p className="cause">Black Lives Matter</p>
-          <p className="cause">Civil Unrest in Sudan</p>
-          <p className="create-protest-btn rights">Know Your Rights</p>
+          <a
+            href="https://blacklivesmatter.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="cause"
+          >
+            Black Lives Matter
+          </a>
+          <a
+            href="https://www.amnesty.org/en/donate/"
+            target="_blank"
+            rel="noreferrer"
+            className="cause"
+          >
+            Human Rights
+          </a>
+          <a
+            href="https://care.org/our-work/disaster-response/emergencies/sudan-humanitarian-crisis/"
+            target="_blank"
+            rel="noreferrer"
+            className="cause"
+          >
+            Human Rights: Sudan
+          </a>
+          <a
+            href="https://wegotthevote.org/freethevote/"
+            target="_blank"
+            rel="noreferrer"
+            className="cause"
+          >
+            Free The Vote
+          </a>
+          <a
+            href="https://mothersagainstpolicebrutality.org/donate/"
+            target="_blank"
+            rel="noreferrer"
+            className="cause"
+          >
+            Police Brutality
+          </a>
+          <a
+            href="https://www.joincampaignzero.org/#vision"
+            target="_blank"
+            rel="noreferrer"
+            className="cause"
+          >
+            Police Reform
+          </a>
+          <a
+            href="https://fairfight.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="cause"
+          >
+            Voting Rights
+          </a>
+          <a
+            href="https://www.aclu.org/know-your-rights/protesters-rights/"
+            target="_blank"
+            rel="noreferrer"
+            className="create-protest-btn rights"
+          >
+            Know Your Rights
+          </a>
 
           <p className="version">Alpha v0.0.1 - Hack The Heights Prototype</p>
         </div>

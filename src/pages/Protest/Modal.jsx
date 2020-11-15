@@ -64,7 +64,7 @@ class Modal extends Component {
               bring an umbrella!
             </p>
             <p>
-              • It looks like it will be pretty cold ❄️, try and dress warm!.
+              • It looks like it will be pretty cold ❄️, try and dress warm!
             </p>
           </div>
           <p>
