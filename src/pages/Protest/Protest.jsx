@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import { withRouter } from "react-router";
 import { BsPeopleFill, BsCalendar } from "react-icons/bs";
 import { GrMapLocation } from "react-icons/gr";
@@ -15,15 +15,19 @@ import {
   RedditShareButton,
   TwitterShareButton,
 } from "react-share";
+import Modal from "./Modal";
 import "./protest.css";
 
 class Protest extends Component {
   constructor(props) {
     super(props);
 
+    this.modalRef = createRef();
+
     this.state = {
       viewport: null,
       protest: null,
+      error: false,
     };
   }
 
@@ -36,17 +40,23 @@ class Protest extends Component {
       .get()
       .then((doc) => {
         const protest = doc.data();
-        const { lng, lat } = protest.starting_point;
-        this.setState({
-          viewport: {
-            width: "100%",
-            height: "100%",
-            latitude: lat,
-            longitude: lng,
-            zoom: 13,
-          },
-          protest,
-        });
+        console.log(protest);
+
+        if (protest) {
+          const { lng, lat } = protest.starting_point;
+          this.setState({
+            viewport: {
+              width: "100%",
+              height: "100%",
+              latitude: lat,
+              longitude: lng,
+              zoom: 13,
+            },
+            protest,
+          });
+        } else {
+          this.setState({ error: true });
+        }
       });
   }
 
@@ -62,13 +72,22 @@ class Protest extends Component {
       this.setState({ protest });
 
       await protestRef.set(protest).then(() => {
-        console.log("completed");
+        this.modalRef.toggleModal();
       });
     });
   };
 
   render() {
-    const { protest } = this.state;
+    const { protest, error } = this.state;
+
+    if (error) {
+      return (
+        <div className="error-container">
+          <p>{`We are having some trouble fetching data for this protest 🙁`}</p>
+          <p>{`Please try again later.`}</p>
+        </div>
+      );
+    }
 
     if (protest) {
       const { name, host, start_time, description, number_of_people } = protest;
@@ -160,6 +179,7 @@ class Protest extends Component {
               </Marker>
             </ReactMapGL>
           </div>
+          <Modal ref={(el) => (this.modalRef = el)} />
         </div>
       );
     } else {

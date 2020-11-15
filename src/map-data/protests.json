@@ -1,24 +1,65 @@
 [
   {
-    "name": "BLM",
-    "state": "MA",
+    "name": "Canada Goose for Fur-Free Friday",
+    "state": "",
     "state_name": "Massachusetts",
-    "county_name": "Middlesex",
-    "number_of_people": 25,
+    "description": "N/A",
+    "county_name": "",
+    "number_of_people": 35,
     "starting_point": {
       "lng": -71.160622,
       "lat": 42.316681,
       "address": "Address Placeholder"
     },
-    "organizer": "Subraiz Ahmed",
+    "organizer": "Dylan Kim",
     "date": {
       "month": "November",
-      "day": 20,
-      "year": 2020
+      "day": 27,
+      "year": 2020,
+      "dayOfWeek": "Friday"
     },
-    "time": {
-      "start": "8:00 PM",
-      "end": "10:30 PM"
-    }
+    "start_time": "6:00 PM"
+  },
+  {
+    "name": "Disrupt The Narrative – Protest",
+    "state": "",
+    "state_name": "Massachusetts",
+    "description": "N/A",
+    "county_name": "",
+    "number_of_people": 103,
+    "starting_point": {
+      "lng": -71.160622,
+      "lat": 42.316681,
+      "address": "Address Placeholder"
+    },
+    "organizer": "Rhianna Patrick",
+    "date": {
+      "month": "November",
+      "day": 27,
+      "year": 2020,
+      "dayOfWeek": "Friday"
+    },
+    "start_time": "6:00 PM"
+  },
+  {
+    "name": "Disrupt The Narrative – Protest",
+    "state": "",
+    "state_name": "Massachusetts",
+    "description": "N/A",
+    "county_name": "",
+    "number_of_people": 103,
+    "starting_point": {
+      "lng": -71.160622,
+      "lat": 42.316681,
+      "address": "Address Placeholder"
+    },
+    "organizer": "Rhianna Patrick",
+    "date": {
+      "month": "November",
+      "day": 27,
+      "year": 2020,
+      "dayOfWeek": "Friday"
+    },
+    "start_time": "6:00 PM"
   }
 ]

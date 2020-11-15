@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
   background-color: #a0dcff;
   height: 100vh;
   width: 100vw;
@@ -59,4 +60,47 @@
 
 .cause:hover {
   color: black;
+}
+
+.version {
+  font-style: italic;
+  font-weight: 300;
+  position: absolute;
+  bottom: 25px;
+  width: 200px;
+  margin: 0;
+}
+
+.second-container {
+  height: 100vh;
+  display: flex;
+  width: 80vw;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.reset-map {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #fff;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+  box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+.locate-icon {
+  font-size: 32px;
+  transition: all 0.25s linear;
+}
+
+.reset-map:hover .locate-icon {
+  transform: scale(1.3);
 }

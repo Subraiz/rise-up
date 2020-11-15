@@ -4,7 +4,7 @@ import { TweenMax } from "gsap";
 import firebase from "firebase";
 import Loader from "react-loader-spinner";
 import CountyMapData from "../../map-data/counties.json";
-// import ProtestData from "../../map-data/protests.json";
+import DummyProtestData from "../../map-data/protests.json";
 
 import "./map.css";
 
@@ -30,7 +30,7 @@ class Map extends Component {
     const zoomSettings = {
       duration: 1000,
       ease: easeCubicInOut,
-      zoomLevel: 4,
+      zoomLevel: 6,
     };
 
     let x;
@@ -84,6 +84,8 @@ class Map extends Component {
       });
 
     const countyMap = select(this.countyMapRef);
+    const toolTip = select("#tool-tip");
+
     const { ProtestData } = this.state;
 
     TweenMax.from(".map-container", 1, {
@@ -116,7 +118,25 @@ class Map extends Component {
       .enter()
       .append("path")
       .attr("d", (feature) => {
-        return path(feature);
+        if (
+          feature.properties.STATE !== "AK" &&
+          feature.properties.STATE !== "HI"
+        ) {
+          return path(feature);
+        }
+      })
+      .on("mouseover", (d, el) => {
+        if (el.active) {
+          const state = el.properties.STATE;
+          const county = el.properties.NAME;
+
+          toolTip.transition().style("visibility", "visible");
+
+          toolTip.text(`${county}, ${state}`);
+        }
+      })
+      .on("mouseout", (d, el) => {
+        toolTip.transition().style("visibility", "hidden");
       })
       .on("click", (d, el) => {
         this.zoom(d, el, path);
@@ -127,7 +147,21 @@ class Map extends Component {
           return item.state === state && item.county_name === countyName;
         });
 
-        this.props.setProtest(protests);
+        if (el.active) {
+          if (protests.length > 0) {
+            this.props.setProtest(protests);
+          } else {
+            let dummyProtests = [];
+            const randomIndex = Math.floor(
+              Math.random() * Math.floor(DummyProtestData.length)
+            );
+            const dummyProtest = DummyProtestData[randomIndex];
+            dummyProtest[`county_name`] = countyName;
+            dummyProtest["state"] = state;
+            dummyProtests.push(dummyProtest);
+            this.props.setProtest(dummyProtests);
+          }
+        }
       })
       .attr("fill", (countyDataItem) => {
         const countyName = countyDataItem.properties.NAME;
@@ -143,41 +177,37 @@ class Map extends Component {
         });
 
         const colors = [`#D8D8D8`, `#BAA1BB`, `#A871A9`, `#B156B2`, `#AD2BAF`];
+        const randomColors = [
+          ...colors,
+          "#D8D8D8",
+          "#D8D8D8",
+          "#D8D8D8",
+          "#D8D8D8",
+        ];
         const randomIndex = Math.floor(
-          Math.random() * Math.floor(colors.length)
+          Math.random() * Math.floor(randomColors.length)
         );
-        const randomColor = colors[randomIndex];
+        const randomColor = randomColors[randomIndex];
 
         if (protests.length > 0) {
+          countyDataItem["active"] = true;
           if (totalNumberOfPeople === 0) {
             return colors[0];
           } else if (totalNumberOfPeople > 0 && totalNumberOfPeople < 50) {
+            return colors[1];
+          } else if (totalNumberOfPeople > 50 && totalNumberOfPeople < 100) {
+            return colors[2];
+          } else if (totalNumberOfPeople > 100 && totalNumberOfPeople < 150) {
+            return colors[3];
+          } else if (totalNumberOfPeople > 150) {
             return colors[4];
           }
         } else {
-          // return randomColor;
-          return colors[0];
-        }
-      })
-      .attr("stroke", (countyDataItem) => {
-        const countyName = countyDataItem.properties.NAME;
-        const state = countyDataItem.properties.STATE;
-
-        let protests = ProtestData.filter((item) => {
-          return item.state === state && item.county_name === countyName;
-        });
-
-        const protest = protests[0];
-
-        if (protest) {
-          const numOfPeople = protest.number_of_people;
-          if (numOfPeople === 0) {
-            return "#e1e1e1";
-          } else if (numOfPeople > 0) {
-            return "#c1399b";
+          if (randomColor !== "#D8D8D8") {
+            countyDataItem["active"] = true;
           }
-        } else {
-          return "#e1e1e1";
+          return randomColor;
+          //return colors[0];
         }
       })
       .attr("cursor", "pointer")
@@ -189,6 +219,7 @@ class Map extends Component {
     if (ProtestData.length !== 0) {
       return (
         <div className="map-container">
+          <div id="tool-tip"></div>
           <svg
             id="county-map"
             ref={(el) => (this.countyMapRef = el)}

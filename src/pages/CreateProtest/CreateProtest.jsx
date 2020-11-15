@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import firebase from "firebase";
 import PlacesAutocomplete, {
   geocodeByAddress,
-  geocodeByPlaceId,
   getLatLng,
 } from "react-places-autocomplete";
 import Loader from "react-loader-spinner";
+import { BiArrowBack } from "react-icons/bi";
 import DateTimePicker from "react-datetime-picker";
 import { withRouter } from "react-router";
 import "./create-protest.css";
@@ -244,6 +244,12 @@ class CreateProtest extends Component {
 
     return (
       <div className="create-protest-container">
+        <BiArrowBack
+          className="create-return-icon"
+          onClick={() => {
+            this.props.history.push("");
+          }}
+        />
         <div className="form-container">
           <h1 className="title">Rise Up</h1>
           <p className="subtitle">Join the Fight</p>

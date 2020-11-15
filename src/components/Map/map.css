@@ -10,5 +10,17 @@ svg {
 
 .map-container {
   transform: scale(1.25);
-  padding-left: 170px;
+}
+
+#tool-tip {
+  visibility: hidden;
+  width: auto;
+  height: auto;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 14px;
+  background-color: white;
+  border-radius: 2px;
+  padding: 2px 5px;
 }
