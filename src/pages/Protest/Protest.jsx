@@ -32,7 +32,10 @@ class Protest extends Component {
   }
 
   async componentWillMount() {
-    const id = window.location.href.split("/").pop();
+    let id = window.location.href.split("/").pop();
+    if (id === "undefined") {
+      id = "hZdnOsL4P5u51CpnSzmT";
+    }
     const db = firebase.firestore();
     await db
       .collection("protests")
@@ -60,7 +63,11 @@ class Protest extends Component {
   }
 
   rsvp = async () => {
-    const id = window.location.href.split("/").pop();
+    let id = window.location.href.split("/").pop();
+
+    if (id === "undefined") {
+      id = "hZdnOsL4P5u51CpnSzmT";
+    }
 
     const db = firebase.firestore();
     const protestRef = db.collection("protests").doc(id);
