@@ -15,23 +15,30 @@ class Home extends Component {
   }
 
   setProtest = (protests) => {
-    console.log(protests);
-
-    this.setState({ protests });
+    if (protests.length > 0) {
+      this.setState({ protests });
+    }
   };
 
   render() {
     return (
       <div className="home-container">
         <div className="nav-container">
-          <button
-            className="create-protest btn"
+          <h1 className="title">Rise Up</h1>
+          <p className="subtitle">Join the Fight</p>
+          <p
+            className="create-protest-btn"
             onClick={() => {
               this.props.history.push("create-protest");
             }}
           >
-            + Create a Protest
-          </button>
+            Create a Protest
+          </p>
+          <p className="nav-header">Find Your Cause</p>
+          <p className="cause">Police Brutality</p>
+          <p className="cause">Black Lives Matter</p>
+          <p className="cause">Civil Unrest in Sudan</p>
+          <p className="nav-header rights">Know Your Rights</p>
         </div>
         <Map ref={(el) => (this.mapRef = el)} setProtest={this.setProtest} />
         {this.state.protests ? (

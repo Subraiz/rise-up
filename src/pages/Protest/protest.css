@@ -1,3 +1,22 @@
+.protest-details-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.protest-details {
+  width: 45%;
+  margin-left: 2.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.protest-map {
+  width: 45%;
+}
+
 .marker-button {
   background: none;
   border: none;
@@ -5,6 +24,127 @@
 }
 
 .marker-button img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.p-name {
+  font-size: 44px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.p-host {
+  font-size: 28px;
+  color: #bdbdbd;
+  font-weight: 600;
+  margin: 0;
+}
+
+.p-interested {
+  margin-top: 60px !important;
+}
+
+.p-address {
+  margin-bottom: 60px !important;
+}
+
+.p-row {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.row-icon {
+  color: black;
+}
+
+.p-row p {
+  color: #b9b9b9;
+  margin: 0;
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.p-description {
+  color: #b9b9b9;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.p-button {
+  background-color: purple;
+  padding: 20px 0;
+  color: white;
+  font-weight: 400;
+  border: none;
+  font-size: 18px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.return-icon {
+  position: absolute;
+  top: 40px;
+  left: 2.5%;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.p-divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.child-divider {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.child-divider div {
+  width: 40%;
+  height: 1px;
+  background-color: #bdbdbd;
+}
+
+.child-divider p {
+  color: #bdbdbd;
+}
+
+.p-loader-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-social {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.child-social {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-icon {
+  font-size: 40px;
+  color: #bdbdbd;
+  transition: all 0.5s ease-in-out;
+}
+
+.social-icon:hover {
+  color: black;
 }

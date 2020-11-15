@@ -1,63 +1,62 @@
 .home-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  background-color: #a0dcff;
   height: 100vh;
   width: 100vw;
 }
 
 .nav-container {
-  width: 100vw;
-  position: absolute;
-  top: 0;
+  width: 20vw;
+  height: 100vh;
   display: flex;
-  padding: 20px 0;
-  justify-content: space-between;
+  flex-direction: column;
+  background-color: white;
+  padding-top: 80px;
 }
 
-.create-protest {
-  border: 2px solid #9b51e0;
-  background: none;
-  padding: 20px 50px;
-  border-radius: 35px;
-  overflow: hidden;
-  color: #9b51e0;
-  font-weight: 600;
+.nav-container p,
+.nav-container h1,
+.nav-container h3 {
+  padding: 0 0 0 25px;
   cursor: pointer;
-  font-size: 18px;
-  margin-left: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.create-protest-btn {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 40px;
   position: relative;
-  transition: ease-out 0.3s;
-  z-index: 1;
+  transition: all 0.4s ease-in;
 }
 
-.create-protest:hover {
-  color: white;
+.nav-header {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 40px;
+  position: relative;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
-.create-protest::before {
-  content: "";
-  transition: 0.5s all ease;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  opacity: 0;
-  background-color: #9b51e0;
-  border-radius: 35px;
-  border: 2px solid #9b51e0;
+.create-protest-btn:hover {
+  opacity: 0.2;
 }
 
-.create-protest:hover:before {
-  transition: 0.5s all ease;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  z-index: -1;
-  color: white;
+.cause {
+  color: #b3b3b3;
+  font-weight: 400;
+  transition: all 0.4s ease-in;
+  margin: 2px 0;
+}
+
+.rights {
+  margin-top: 20px;
+}
+
+.cause:hover {
+  color: black;
 }

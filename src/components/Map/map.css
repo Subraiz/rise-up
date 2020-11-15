@@ -9,5 +9,6 @@ svg {
 }
 
 .map-container {
-  transform: scale(1.75);
+  transform: scale(1.25);
+  padding-left: 170px;
 }

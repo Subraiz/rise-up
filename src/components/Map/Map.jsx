@@ -16,7 +16,7 @@ class Map extends Component {
 
     this.height = 900;
     this.width = 500;
-    this.scale = 1.75;
+    this.scale = 1.25;
     this.centered = null;
 
     this.state = {
@@ -142,14 +142,21 @@ class Map extends Component {
           totalNumberOfPeople += protest.number_of_people;
         });
 
+        const colors = [`#D8D8D8`, `#BAA1BB`, `#A871A9`, `#B156B2`, `#AD2BAF`];
+        const randomIndex = Math.floor(
+          Math.random() * Math.floor(colors.length)
+        );
+        const randomColor = colors[randomIndex];
+
         if (protests.length > 0) {
           if (totalNumberOfPeople === 0) {
-            return "rgba(173,43,175, .2)";
+            return colors[0];
           } else if (totalNumberOfPeople > 0 && totalNumberOfPeople < 50) {
-            return "rgba(173,43,175, 1)";
+            return colors[4];
           }
         } else {
-          return "#e7e7e7";
+          // return randomColor;
+          return colors[0];
         }
       })
       .attr("stroke", (countyDataItem) => {
@@ -192,7 +199,15 @@ class Map extends Component {
       );
     } else {
       return (
-        <div>
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <Loader
             type="Puff"
             color="#C1399B"

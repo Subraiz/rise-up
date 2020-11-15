@@ -6,3 +6,8 @@ html {
   padding: 0;
   overflow: hidden;
 }
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
