@@ -1,0 +1,10 @@
+.marker-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.marker-button img {
+  width: 30px;
+  height: 30px;
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "name": "BLM",
+    "state": "MA",
+    "state_name": "Massachusetts",
+    "county_name": "Middlesex",
+    "number_of_people": 25,
+    "starting_point": {
+      "lng": -71.160622,
+      "lat": 42.316681,
+      "address": "Address Placeholder"
+    },
+    "organizer": "Subraiz Ahmed",
+    "date": {
+      "month": "November",
+      "day": 20,
+      "year": 2020
+    },
+    "time": {
+      "start": "8:00 PM",
+      "end": "10:30 PM"
+    }
+  }
+]

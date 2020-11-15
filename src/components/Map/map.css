@@ -1,0 +1,13 @@
+svg {
+  display: block;
+}
+
+.background {
+  fill: none;
+  z-index: 1;
+  pointer-events: all;
+}
+
+.map-container {
+  transform: scale(1.75);
+}
