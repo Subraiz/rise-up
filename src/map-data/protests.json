@@ -61,5 +61,131 @@
       "dayOfWeek": "Friday"
     },
     "start_time": "6:00 PM"
+  },
+  {
+    "name": "Voter Transparency Peaceful Protest",
+    "state": "",
+    "state_name": "Massachusetts",
+    "description": "N/A",
+    "county_name": "",
+    "number_of_people": 27,
+    "starting_point": {
+      "lng": -71.160622,
+      "lat": 42.316681,
+      "address": "Address Placeholder"
+    },
+    "organizer": "Rhianna Patrick",
+    "date": {
+      "month": "November",
+      "day": 27,
+      "year": 2020,
+      "dayOfWeek": "Friday"
+    },
+    "start_time": "6:00 PM"
+  },
+  {
+    "name": "State Budget Protest",
+    "state": "",
+    "state_name": "Massachusetts",
+    "description": "N/A",
+    "county_name": "",
+    "number_of_people": 52,
+    "starting_point": {
+      "lng": -71.160622,
+      "lat": 42.316681,
+      "address": "Address Placeholder"
+    },
+    "organizer": "Rhianna Patrick",
+    "date": {
+      "month": "November",
+      "day": 27,
+      "year": 2020,
+      "dayOfWeek": "Friday"
+    },
+    "start_time": "6:00 PM"
+  },
+  {
+    "name": "#EndAnglophoneCrisis Online Protest",
+    "state": "",
+    "state_name": "Massachusetts",
+    "description": "N/A",
+    "county_name": "",
+    "number_of_people": 42,
+    "starting_point": {
+      "lng": -71.160622,
+      "lat": 42.316681,
+      "address": "Address Placeholder"
+    },
+    "organizer": "Rhianna Patrick",
+    "date": {
+      "month": "November",
+      "day": 27,
+      "year": 2020,
+      "dayOfWeek": "Friday"
+    },
+    "start_time": "6:00 PM"
+  },
+  {
+    "name": "Sanctuary Deer Hunt Protest",
+    "state": "",
+    "state_name": "Massachusetts",
+    "description": "N/A",
+    "county_name": "",
+    "number_of_people": 4,
+    "starting_point": {
+      "lng": -71.160622,
+      "lat": 42.316681,
+      "address": "Address Placeholder"
+    },
+    "organizer": "Rhianna Patrick",
+    "date": {
+      "month": "November",
+      "day": 27,
+      "year": 2020,
+      "dayOfWeek": "Friday"
+    },
+    "start_time": "6:00 PM"
+  },
+  {
+    "name": "Revisiting Hong Kong Protest",
+    "state": "",
+    "state_name": "Massachusetts",
+    "description": "N/A",
+    "county_name": "",
+    "number_of_people": 23,
+    "starting_point": {
+      "lng": -71.160622,
+      "lat": 42.316681,
+      "address": "Address Placeholder"
+    },
+    "organizer": "Rhianna Patrick",
+    "date": {
+      "month": "November",
+      "day": 27,
+      "year": 2020,
+      "dayOfWeek": "Friday"
+    },
+    "start_time": "6:00 PM"
+  },
+  {
+    "name": "BLM Protest",
+    "state": "",
+    "state_name": "Massachusetts",
+    "description": "N/A",
+    "county_name": "",
+    "number_of_people": 10,
+    "starting_point": {
+      "lng": -71.160622,
+      "lat": 42.316681,
+      "address": "Address Placeholder"
+    },
+    "organizer": "Rhianna Patrick",
+    "date": {
+      "month": "November",
+      "day": 27,
+      "year": 2020,
+      "dayOfWeek": "Friday"
+    },
+    "start_time": "6:00 PM"
   }
 ]
